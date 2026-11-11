@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#050914">
+<meta name="description" content="SKY RANGER X — Official Esports Team">
+<title>SKY RANGER X | Official Esports</title>
+<style>
+:root{--bg:#050914;--panel:#0b1730;--panel2:#101f3b;--blue:#087bff;--cyan:#58dfff;--gold:#ffbd54;--white:#f4f8ff;--muted:#a9bbd5;--line:#1d4b7a}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:86px}body{margin:0;background:radial-gradient(ellipse at 50% -15%,#173b69 0%,#071020 38%,#03060d 78%);color:var(--white);font-family:Arial,Helvetica,sans-serif;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(120deg,transparent 48%,#2777bb 49%,transparent 50%),linear-gradient(30deg,transparent 48%,#2777bb 49%,transparent 50%);background-size:90px 90px;mask-image:linear-gradient(to bottom,black,transparent 75%);z-index:-1}
+header{position:sticky;top:0;z-index:50;background:#040914ed;border-bottom:1px solid #1b4775;backdrop-filter:blur(16px);box-shadow:0 8px 30px #0006}
+.nav{max-width:1200px;margin:auto;padding:10px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:1000;letter-spacing:2px}.brand img{width:58px;height:43px;object-fit:contain;filter:drop-shadow(0 0 10px #168bff66)}
+nav{display:flex;align-items:center;gap:8px}nav a{padding:11px 13px;border-radius:6px;text-decoration:none;color:#c6d8f1;font-size:12px;font-weight:900;letter-spacing:1.2px;transition:.2s}nav a:hover,nav a.active{color:white;background:linear-gradient(110deg,#087bff55,#58dfff20);box-shadow:inset 0 0 0 1px #319dff66}
+.menu{display:none;background:#10213d;color:white;border:1px solid var(--line);border-radius:7px;padding:9px 12px;font-size:20px}
+section{max-width:1200px;margin:auto;padding:76px 22px}.hero{min-height:620px;display:grid;place-items:center;text-align:center;position:relative;overflow:hidden;padding-top:70px;padding-bottom:90px}
+.hero:before,.hero:after{content:"";position:absolute;width:390px;height:390px;border:1px solid #168bff35;transform:rotate(45deg);box-shadow:0 0 90px #168bff20;pointer-events:none}.hero:after{width:570px;height:570px;border-color:#ffbd5420}
+.hero-inner{position:relative;z-index:1;max-width:900px}.hero-logo{width:min(86vw,610px);max-height:300px;object-fit:contain;filter:drop-shadow(0 0 30px #168bff66);animation:float 5s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+.kicker{color:var(--cyan);letter-spacing:5px;font-size:12px;font-weight:1000;margin:18px 0 12px}h1{font-size:clamp(38px,8vw,82px);line-height:.98;margin:0;font-weight:1000;letter-spacing:3px;text-shadow:0 5px 0 #082b58,0 0 30px #168bff88}.hero p{color:#c0d1e9;line-height:1.8;max-width:620px;margin:22px auto 28px}
+.btn{display:inline-block;padding:14px 24px;border:1px solid #63dfff;background:linear-gradient(110deg,#087bff,#4edcff);color:#031024;border-radius:7px;text-decoration:none;font-size:12px;font-weight:1000;letter-spacing:1.5px;box-shadow:0 9px 28px #087bff55;transition:.2s}.btn:hover{transform:translateY(-3px);box-shadow:0 13px 34px #087bff77}.btn.secondary{background:#0b1930;color:#d8edff;border-color:#28659a;margin-left:8px}
+.section-head{text-align:center;margin-bottom:34px}.section-head small{color:var(--cyan);letter-spacing:4px;font-size:11px;font-weight:1000}.section-head h2{font-size:clamp(29px,5vw,45px);margin:11px 0;text-shadow:0 0 24px #168bff44}.section-head p{color:var(--muted);margin:0}
+.roster{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:20px}.player{position:relative;background:linear-gradient(145deg,#142b4d,#081222 70%);border:1px solid #205687;border-radius:13px;overflow:hidden;box-shadow:0 15px 35px #0008;transition:.25s;transform-style:preserve-3d}.player:hover{transform:translateY(-8px) rotateX(2deg);border-color:var(--cyan);box-shadow:0 20px 42px #087bff35}.player:before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,transparent,var(--cyan),var(--gold),transparent);z-index:1}
+.player img{width:100%;height:285px;object-fit:cover;object-position:center 24%;display:block;background:#101d31}.player-info{padding:17px}.tag{color:var(--gold);font-size:10px;letter-spacing:2px;font-weight:1000}.player h3{margin:8px 0;font-size:21px;letter-spacing:1px}.player p{margin:0;color:#b6c9e3;font-size:13px;line-height:1.6}
+.tournament-wrap{display:grid;grid-template-columns:1fr 1fr;gap:20px}.t-card{padding:26px;border:1px solid #245681;border-radius:13px;background:linear-gradient(145deg,#122746,#081120);box-shadow:0 15px 30px #0006}.t-card h3{margin:0 0 10px;color:var(--cyan)}.t-card p{color:#b5c8e1;line-height:1.75;margin:0}.status{display:inline-block;margin-bottom:12px;padding:6px 9px;border:1px solid #916d2d;border-radius:4px;color:var(--gold);font-size:10px;font-weight:900;letter-spacing:1.3px}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px}.gallery button{padding:0;border:1px solid #245681;border-radius:10px;overflow:hidden;background:#0b1730;cursor:pointer;box-shadow:0 10px 25px #0007;transition:.2s}.gallery button:hover{transform:scale(1.025);border-color:var(--cyan)}.gallery img{display:block;width:100%;height:260px;object-fit:cover}.gallery .logo-tile{height:260px;display:grid;place-items:center;background:radial-gradient(circle,#163b65,#050914)}.gallery .logo-tile img{height:auto;max-height:190px;object-fit:contain}
+.about{display:grid;grid-template-columns:1.1fr .9fr;gap:20px}.panel{padding:26px;border:1px solid #20517e;border-radius:13px;background:linear-gradient(145deg,#112744,#080f1d);box-shadow:0 12px 30px #0006}.panel h3{color:var(--cyan);margin-top:0}.panel p{color:#b6c8df;line-height:1.8}.values{line-height:2;color:#c2d4eb}
+footer{text-align:center;padding:30px 18px;border-top:1px solid #183e65;color:#8fa8c7;font-size:12px;background:#030711}footer b{color:var(--cyan);letter-spacing:3px}
+.lightbox{position:fixed;inset:0;background:#000e;z-index:100;display:none;place-items:center;padding:20px}.lightbox.open{display:grid}.lightbox img{max-width:min(92vw,900px);max-height:85vh;object-fit:contain;border:1px solid #4cbcff;border-radius:10px;box-shadow:0 0 50px #087bff55}.close{position:absolute;top:18px;right:22px;background:#12233d;color:white;border:1px solid #58dfff;border-radius:50%;width:42px;height:42px;font-size:24px;cursor:pointer}
+@media(max-width:700px){.nav{flex-wrap:wrap}.menu{display:block}nav{display:none;width:100%;flex-direction:column;align-items:stretch;padding-bottom:8px}nav.show{display:flex}nav a{padding:13px}.hero{min-height:540px}.tournament-wrap,.about{grid-template-columns:1fr}.player img{height:320px}section{padding:58px 16px}.hero-logo{max-height:230px}}
+</style>
+</head>
+<body>
+<header><div class="nav">
+  <div class="brand"><img src="images/srx-logo.png" alt="SRX Logo"><span>SKY RANGER X</span></div>
+  <button class="menu" id="menuBtn" aria-label="Open menu">☰</button>
+  <nav id="navLinks"><a class="active" href="#home">HOME</a><a href="#players">PLAYERS</a><a href="#tournaments">TOURNAMENTS</a><a href="#gallery">GALLERY</a><a href="#about">ABOUT</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="hero-inner">
+  <img class="hero-logo" src="images/srx-logo.png" alt="SKY RANGER X official logo">
+  <div class="kicker">OFFICIAL ESPORTS TEAM</div><h1>SKY RANGER X</h1>
+  <p>ONE TEAM. ONE DREAM. ONE LEGACY.<br>Built by passion. United by teamwork. Ready for every challenge.</p>
+  <a class="btn" href="#players">MEET THE TEAM</a><a class="btn secondary" href="#tournaments">TOURNAMENTS</a>
+</div></section>
+
+<section id="players"><div class="section-head"><small>THE PEOPLE BEHIND THE LEGACY</small><h2>TEAM PLAYERS</h2><p>Meet the players and leadership of SKY RANGER X.</p></div>
+<div class="roster">
+  <article class="player"><img src="images/shafi.jpg" alt="SRX Shafi"><div class="player-info"><span class="tag">FOUNDER • TEAM LEADER</span><h3>SRX SHAFI</h3><p>Sniper • IGL • Founder</p></div></article>
+  <article class="player"><img src="images/ajij.jpg" alt="SRX Ajij"><div class="player-info"><span class="tag">CO-FOUNDER</span><h3>SRX AJIJ</h3><p>Co-founder • 2nd Rusher</p></div></article>
+  <article class="player"><img src="images/sanim.jpg" alt="SRX Sanim"><div class="player-info"><span class="tag">PLAYER</span><h3>SRX SANIM</h3><p>Supporter</p></div></article>
+  <article class="player"><img src="images/mahin.jpg" alt="SRX Mahin"><div class="player-info"><span class="tag">PLAYER</span><h3>SRX MAHIN</h3><p>Neader</p></div></article>
+  <article class="player"><img src="images/nayem.jpg" alt="SRX Nayem"><div class="player-info"><span class="tag">TEAM STAFF</span><h3>SRX NAYEM</h3><p>Coach</p></div></article>
+</div></section>
+
+<section id="tournaments"><div class="section-head"><small>COMPETE • IMPROVE • REPEAT</small><h2>TOURNAMENTS</h2><p>Competition updates and team milestones.</p></div>
+<div class="tournament-wrap">
+  <article class="t-card"><span class="status">TOURNAMENT UPDATES</span><h3>SRX COMPETITIVE JOURNEY</h3><p>Official tournament participation and results will be posted here. Stay connected for match schedules, standings, and announcements.</p></article>
+  <article class="t-card"><span class="status">COMING SOON</span><h3>NEXT MATCH / EVENT</h3><p>Match date, opponent, lobby details, and results will be added when officially announced by the team.</p></article>
+</div></section>
+
+<section id="gallery"><div class="section-head"><small>CAPTURE THE MOMENT</small><h2>TEAM GALLERY</h2><p>Tap any image to view it larger.</p></div>
+<div class="gallery">
+  <button type="button" data-full="images/srx-logo.png" aria-label="View SRX logo"><span class="logo-tile"><img src="images/srx-logo.png" alt="SRX team logo"></span></button>
+  <button type="button" data-full="images/shafi.jpg"><img src="images/shafi.jpg" alt="SRX Shafi"></button>
+  <button type="button" data-full="images/ajij.jpg"><img src="images/ajij.jpg" alt="SRX Ajij"></button>
+  <button type="button" data-full="images/sanim.jpg"><img src="images/sanim.jpg" alt="SRX Sanim"></button>
+  <button type="button" data-full="images/mahin.jpg"><img src="images/mahin.jpg" alt="SRX Mahin"></button>
+  <button type="button" data-full="images/nayem.jpg"><img src="images/nayem.jpg" alt="SRX Nayem"></button>
+</div></section>
+
+<section id="about"><div class="section-head"><small>OUR IDENTITY</small><h2>BUILT TO COMPETE</h2></div>
+<div class="about"><div class="panel"><h3>ABOUT SKY RANGER X</h3><p>SKY RANGER X is an esports team built on teamwork, discipline, dedication, and the hunger to improve. Every player has a role, every match is a new challenge, and every victory belongs to the whole squad.</p></div>
+<div class="panel"><h3>OUR CORE VALUES</h3><p class="values">⚡ TEAMWORK — Trust every teammate.<br>🎯 DISCIPLINE — Practice with purpose.<br>🤝 RESPECT — Respect every opponent.<br>👑 LEGACY — Keep pushing forward.</p></div></div>
+</section>
+</main>
+<footer><b>SKY RANGER X</b><p>© <span id="year">2026</span> SKY RANGER X. All rights reserved.</p></footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Gallery image preview"><button class="close" id="closeBox" aria-label="Close">×</button><img id="lightboxImg" src="" alt="Gallery preview"></div>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('show'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('show')));
+document.getElementById('year').textContent=new Date().getFullYear();
+const sections=[...document.querySelectorAll('main section[id]')];
+const links=[...nav.querySelectorAll('a')];
+const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){links.forEach(link=>link.classList.toggle('active',link.getAttribute('href')==='#'+entry.target.id));}}),{rootMargin:'-35% 0px -55% 0px'});
+sections.forEach(section=>observer.observe(section));
+const lightbox=document.getElementById('lightbox'), lightboxImg=document.getElementById('lightboxImg');
+document.querySelectorAll('.gallery button').forEach(button=>button.addEventListener('click',()=>{lightboxImg.src=button.dataset.full;lightbox.classList.add('open');}));
+function closeLightbox(){lightbox.classList.remove('open');lightboxImg.src='';}
+document.getElementById('closeBox').addEventListener('click',closeLightbox);
+lightbox.addEventListener('click',event=>{if(event.target===lightbox)closeLightbox();});
+document.addEventListener('keydown',event=>{if(event.key==='Escape')closeLightbox();});
+</script>
+</body>
+</html>
